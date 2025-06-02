@@ -11,7 +11,7 @@ const ProductList = () => {
             className="productImage"
           />
           <p className="productName">Product Name</p>
-          <p className="productPrize">Prize</p>
+          <p className="productPrice">Price</p>
         </div>
       </div>
     </>
