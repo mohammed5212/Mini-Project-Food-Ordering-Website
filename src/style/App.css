@@ -1,13 +1,13 @@
 .productContainer{ 
-   height: 10px;
-   width: auto;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
 .productItem {
 
 }
-.productImage {height: 100%;
-    width: auto;
+.productImage {
+    width: 100%;
     
 
 }
