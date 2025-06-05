@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "name": "Butter Chicken",
+    "price": 250,
+    "image": "https://iwashyoudry.com/wp-content/uploads/2020/02/Indian-Butter-Chicken-Recipe-5.jpg",
+    "category": "Main Course",
+    "type": "Non-Veg"
+  },
+  {
+    "id": 2,
+    "name": "Paneer Butter Masala",
+    "price": 200,
+    "image": "https://th.bing.com/th/id/OSK.9fb4bdcc509c86e8eb663808fafb646f?w=164&h=85&rs=2&qlt=80&o=6&cdv=1&cb=thws1&dpr=1.7&pid=16.1",
+    "category": "Main Course",
+    "type": "Veg"
+  },
+  {
+    "id": 3,
+    "name": "Chole Bhature",
+    "price": 120,
+    "image": "https://static.vecteezy.com/system/resources/previews/015/933/043/large_2x/chole-bhature-is-a-north-indian-food-dish-a-combination-of-chana-masala-and-bhatura-or-puri-free-photo.jpg",
+    "category": "Street Food",
+    "type": "Veg"
+  },
+  {
+    "id": 4,
+    "name": "Biryani",
+    "price": 220,
+    "image": "https://s3.scoopwhoop.com/ach/biryani/5.jpg",
+    "category": "Main Course",
+    "type": "Non-Veg"
+  },
+  {
+    "id": 5,
+    "name": "Rajma Chawal",
+    "price": 100,
+    "image": "https://i.pinimg.com/originals/7a/f4/ba/7af4ba8277ff0cc7a0d7fa6cd2af2ac3.jpg",
+    "category": "Main Course",
+    "type": "Veg"
+  },
+  {
+    "id": 6,
+    "name": "Masala Dosa",
+    "price": 90,
+    "image": "https://i.pinimg.com/originals/e8/dc/7f/e8dc7f0b59b8602ba30621dee3c6291c.jpg",
+    "category": "South Indian",
+    "type": "Veg"
+  },
+  {
+    "id": 7,
+    "name": "Samosa",
+    "price": 20,
+    "image": "https://www.thespruceeats.com/thmb/-O6uu2nR3pFAXg0M4Fx2S0tVuCs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1127143255-5c5f7e3546e0fb0001442255.jpg",
+    "category": "Snack",
+    "type": "Veg"
+  },
+  {
+    "id": 8,
+    "name": "Vada Pav",
+    "price": 25,
+    "image": "https://thatdeliciousdish.com/wp-content/uploads/2019/04/Vada-Pav-Recipe-thumbnail.jpg",
+    "category": "Street Food",
+    "type": "Veg"
+  },
+  {
+    "id": 9,
+    "name": "Pav Bhaji",
+    "price": 80,
+    "image": "https://i.pinimg.com/originals/64/3e/44/643e44bf9ce7d6db2501dcb6a4f9dac4.jpg",
+    "category": "Street Food",
+    "type": "Veg"
+  },
+  {
+    "id": 10,
+    "name": "Tandoori Chicken",
+    "price": 240,
+    "image": "https://amritsr.com/wp-content/uploads/2021/05/tandoori-chicken-1.jpeg",
+    "category": "Tandoori",
+    "type": "Non-Veg"
+  },
+  {
+    "id": 11,
+    "name": "Chicken Tikka",
+    "price": 220,
+    "image": "https://bellyfull.net/wp-content/uploads/2021/05/Chicken-Tikka-Masala-blog.jpg",
+    "category": "Tandoori",
+    "type": "Non-Veg"
+  },
+  {
+    "id": 12,
+    "name": "Dal Makhani",
+    "price": 160,
+    "image": "https://www.funfoodfrolic.com/wp-content/uploads/2023/04/Dal-Makhani-Blog.jpg",
+    "category": "Main Course",
+    "type": "Veg"
+  },
+  {
+    "id": 13,
+    "name": "Kadai Paneer",
+    "price": 180,
+    "image": "https://images.pexels.com/photos/6172788/pexels-photo-6172788.jpeg",
+    "category": "Main Course",
+    "type": "Veg"
+  },
+  {
+    "id": 14,
+    "name": "Fish Curry",
+    "price": 260,
+    "image": "https://images.pexels.com/photos/1639568/pexels-photo-1639568.jpeg",
+    "category": "Main Course",
+    "type": "Non-Veg"
+  },
+  {
+    "id": 15,
+    "name": "Pani Puri",
+    "price": 20,
+    "image": "https://images.pexels.com/photos/3026813/pexels-photo-3026813.jpeg",
+    "category": "Chaat",
+    "type": "Veg"
+  },
+  {
+    "id": 16,
+    "name": "Sev Puri",
+    "price": 30,
+    "image": "https://images.pexels.com/photos/1640776/pexels-photo-1640776.jpeg",
+    "category": "Chaat",
+    "type": "Veg"
+  },
+  {
+    "id": 17,
+    "name": "Gulab Jamun",
+    "price": 40,
+    "image": "https://images.pexels.com/photos/1408313/pexels-photo-1408313.jpeg",
+    "category": "Dessert",
+    "type": "Sweet"
+  },
+  {
+    "id": 18,
+    "name": "Rasgulla",
+    "price": 35,
+    "image": "https://images.pexels.com/photos/1618918/pexels-photo-1618918.jpeg",
+    "category": "Dessert",
+    "type": "Sweet"
+  },
+  {
+    "id": 19,
+    "name": "Jalebi",
+    "price": 40,
+    "image": "https://images.pexels.com/photos/1640768/pexels-photo-1640768.jpeg",
+    "category": "Dessert",
+    "type": "Sweet"
+  },
+  {
+    "id": 20,
+    "name": "Dhokla",
+    "price": 40,
+    "image": "https://images.pexels.com/photos/106343/pexels-photo-106343.jpeg",
+    "category": "Snack",
+    "type": "Steamed"
+  },
+  {
+    "id": 21,
+    "name": "Aloo Tikki",
+    "price": 30,
+    "image": "https://images.pexels.com/photos/960984/pexels-photo-960984.jpeg",
+    "category": "Street Food",
+    "type": "Veg"
+  },
+  {
+    "id": 22,
+    "name": "Bhindi Masala",
+    "price": 140,
+    "image": "https://images.pexels.com/photos/1618916/pexels-photo-1618916.jpeg",
+    "category": "Main Course",
+    "type": "Veg"
+  },
+  {
+    "id": 23,
+    "name": "Palak Paneer",
+    "price": 190,
+    "image": "https://images.pexels.com/photos/1117865/pexels-photo-1117865.jpeg",
+    "category": "Main Course",
+    "type": "Veg"
+  },
+  {
+    "id": 24,
+    "name": "Egg Curry",
+    "price": 170,
+    "image": "https://images.pexels.com/photos/1283883/pexels-photo-1283883.jpeg",
+    "category": "Main Course",
+    "type": "Non-Veg"
+  },
+  {
+    "id": 25,
+    "name": "Veg Biryani",
+    "price": 180,
+    "image": "https://images.pexels.com/photos/6602822/pexels-photo-6602822.jpeg",
+    "category": "Main Course",
+    "type": "Veg"
+  },
+  {
+    "id": 26,
+    "name": "Roti",
+    "price": 10,
+    "image": "https://images.pexels.com/photos/1372711/pexels-photo-1372711.jpeg",
+    "category": "Bread",
+    "type": "Veg"
+  },
+  {
+    "id": 27,
+    "name": "Naan",
+    "price": 25,
+    "image": "https://images.pexels.com/photos/1283880/pexels-photo-1283880.jpeg",
+    "category": "Bread",
+    "type": "Veg"
+  },
+  {
+    "id": 28,
+    "name": "Paratha",
+    "price": 30,
+    "image": "https://images.pexels.com/photos/1283882/pexels-photo-1283882.jpeg",
+    "category": "Bread",
+    "type": "Veg"
+  },
+  {
+    "id": 29,
+    "name": "Kachori",
+    "price": 25,
+    "image": "https://images.pexels.com/photos/1640778/pexels-photo-1640778.jpeg",
+    "category": "Snack",
+    "type": "Veg"
+  },
+  {
+    "id": 30,
+    "name": "Lassi",
+    "price": 50,
+    "image": "https://images.pexels.com/photos/3026812/pexels-photo-3026812.jpeg",
+    "category": "Drink",
+    "type": "Sweet"
+  },
+   {
+    "id": 31,
+    "name": "Hyderabadi Chicken Biryani",
+    "price": 220,
+    "image": "https://images.pexels.com/photos/1117866/pexels-photo-1117866.jpeg",
+    "category": "Non-Veg",
+    "spiceLevel": "High"
+  },
+  {
+    "id": 32,
+    "name": "Lucknowi Mutton Biryani",
+    "price": 280,
+    "image": "https://images.pexels.com/photos/1618917/pexels-photo-1618917.jpeg",
+    "category": "Non-Veg",
+    "spiceLevel": "Medium"
+  },
+  {
+    "id": 33,
+    "name": "Kolkata Chicken Biryani",
+    "price": 230,
+    "image": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg",
+    "category": "Non-Veg",
+    "spiceLevel": "Medium"
+  },
+  {
+    "id": 34,
+    "name": "Vegetable Biryani",
+    "price": 160,
+    "image": "https://images.pexels.com/photos/6602822/pexels-photo-6602822.jpeg",
+    "category": "Veg",
+    "spiceLevel": "Mild"
+  },
+  {
+    "id": 35,
+    "name": "Paneer Biryani",
+    "price": 180,
+    "image": "https://images.pexels.com/photos/6172788/pexels-photo-6172788.jpeg",
+    "category": "Veg",
+    "spiceLevel": "Medium"
+  },
+  {
+    "id": 36,
+    "name": "Andhra Spicy Chicken Biryani",
+    "price": 240,
+    "image": "https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg",
+    "category": "Non-Veg",
+    "spiceLevel": "Very High"
+  },
+  {
+    "id": 37,
+    "name": "Egg Biryani",
+    "price": 150,
+    "image": "https://images.pexels.com/photos/1283883/pexels-photo-1283883.jpeg",
+    "category": "Non-Veg",
+    "spiceLevel": "Medium"
+  },
+  {
+    "id": 38,
+    "name": "Mushroom Biryani",
+    "price": 170,
+    "image": "https://images.pexels.com/photos/3026800/pexels-photo-3026800.jpeg",
+    "category": "Veg",
+    "spiceLevel": "Low"
+  },
+  {
+    "id": 39,
+    "name": "Dum Biryani",
+    "price": 200,
+    "image": "https://images.pexels.com/photos/1117863/pexels-photo-1117863.jpeg",
+    "category": "Non-Veg",
+    "spiceLevel": "Medium"
+  },
+  {
+    "id": 40,
+    "name": "Malabar Fish Biryani",
+    "price": 260,
+    "image": "https://images.pexels.com/photos/1639568/pexels-photo-1639568.jpeg",
+    "category": "Non-Veg",
+    "spiceLevel": "Medium"
+  },
+  {
+    "id": 41,
+    "name": "Samosa",
+    "price": 20,
+    "image": "https://images.pexels.com/photos/1117864/pexels-photo-1117864.jpeg",
+    "category": "Street Food",
+    "type": "Fried"
+  },
+  {
+    "id": 42,
+    "name": "Aloo Tikki",
+    "price": 30,
+    "image": "https://images.pexels.com/photos/960984/pexels-photo-960984.jpeg",
+    "category": "Street Food",
+    "type": "Fried"
+  },
+  {
+    "id": 43,
+    "name": "Dhokla",
+    "price": 40,
+    "image": "https://images.pexels.com/photos/106343/pexels-photo-106343.jpeg",
+    "category": "Gujarati",
+    "type": "Steamed"
+  },
+  {
+    "id": 44,
+    "name": "Vada Pav",
+    "price": 25,
+    "image": "https://images.pexels.com/photos/1600710/pexels-photo-1600710.jpeg",
+    "category": "Maharashtrian",
+    "type": "Fried"
+  },
+  {
+    "id": 45,
+    "name": "Paneer Pakora",
+    "price": 50,
+    "image": "https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg",
+    "category": "North Indian",
+    "type": "Fried"
+  },
+  {
+    "id": 46,
+    "name": "Sev Puri",
+    "price": 35,
+    "image": "https://images.pexels.com/photos/1640776/pexels-photo-1640776.jpeg",
+    "category": "Chaat",
+    "type": "Cold"
+  },
+  {
+    "id": 47,
+    "name": "Bhel Puri",
+    "price": 30,
+    "image": "https://images.pexels.com/photos/1640771/pexels-photo-1640771.jpeg",
+    "category": "Chaat",
+    "type": "Cold"
+  },
+  {
+    "id": 48,
+    "name": "Kachori",
+    "price": 25,
+    "image": "https://images.pexels.com/photos/1640778/pexels-photo-1640778.jpeg",
+    "category": "Rajasthani",
+    "type": "Fried"
+  },
+  {
+    "id": 49,
+    "name": "Pani Puri",
+    "price": 20,
+    "image": "https://images.pexels.com/photos/3026813/pexels-photo-3026813.jpeg",
+    "category": "Chaat",
+    "type": "Cold"
+  },
+  {
+    "id": 50,
+    "name": "Jalebi",
+    "price": 40,
+    "image": "https://images.pexels.com/photos/1640768/pexels-photo-1640768.jpeg",
+    "category": "Sweet",
+    "type": "Fried"
+  }
+]
