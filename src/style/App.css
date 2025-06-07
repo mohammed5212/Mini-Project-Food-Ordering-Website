@@ -6,10 +6,11 @@
 }
 .productItem {background-color: antiquewhite;
     border-radius: 10px;
-    overflow: hidden; 
+    overflow: hidden;
+    height: 50vh; 
 
 }
-.productImage {
+.productImage {height: 70%;
     width: 100%; 
     
 
