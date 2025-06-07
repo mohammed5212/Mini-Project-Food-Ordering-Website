@@ -19,7 +19,7 @@ const ProductList = () => {
               />
               <p className="productName">{product.name}</p>
               <p className="productPrice">₹{product.price.toFixed(2)}</p>
-              <p className="category">{product.category}</p>
+              {/* <p className="category">{product.category}</p> */}
             </div>
           ))
         )}

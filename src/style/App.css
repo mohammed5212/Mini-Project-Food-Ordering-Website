@@ -6,15 +6,16 @@
 }
  @media (max-width: 600px) {
   .productContainer { display:grid;
-    grid-template-columns:repeat(3, 1fr); /* single column on small screens */
+    grid-template-columns:repeat(3,1fr 
+    ); /* single column on small screens */
         padding: 10px;
     }
   }
-.productItem {background-color: #fff;
+.productItem {background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
   padding: 8px;
-  /* aspect-ratio: 1 / 1; */
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
@@ -28,6 +29,6 @@
 .productName {
 
 }
-.productPrize {
+.productPrice {
 
 } 
