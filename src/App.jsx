@@ -4,7 +4,7 @@ import ProductList from './components/ProductList'
 
 
 
-function App() {
+const App = ()=> {
   const [count, setCount] = useState(0)
 
   return (
