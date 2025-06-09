@@ -1,5 +1,5 @@
 import "../style/App.css";
-import products from "../Products.json";
+import products from "../data/Products.json";
 
 const ProductList = ({products}) => {
   return (
@@ -20,11 +20,7 @@ const ProductList = ({products}) => {
               <p className="productName">{product.name}</p>
               <p className="productPrice">₹{product.price.toFixed(2)}</p>
               
-              <div className="buttonContainer">
-                <button className="buyBtn" onClick= {()=>handleBuy(product)}>Buy</button>
-                  <button className="cartBtn" onClick={()=>onAddToCart(product)}>Add To Cart</button>
-
-              </div>
+             
             </div>
           ))
         )}

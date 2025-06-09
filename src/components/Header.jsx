@@ -16,7 +16,7 @@ const Header =({searchText, setSearchText, onCategoryChange}) =>{
             <select className="dropdown" onChange={(e) => onCategoryChange(e.target.value)}>
                 <option value="All"> All</option>
                  <option value="Main Course">Main Course</option>
-                  <option value="Snack">Snack</option>
+                  <option value="Snacks">Snacks</option>
                    <option value="Dessert">Dessert</option>
                     <option value="Street Food">Street Food</option>
 
