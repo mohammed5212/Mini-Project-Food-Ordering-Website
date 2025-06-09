@@ -1,7 +1,7 @@
 import "../style/App.css";
 import products from "../data/Products.json";
 
-const ProductList = () => {
+const ProductList = ({products}) => {
   return (
     <>
 
@@ -19,7 +19,6 @@ const ProductList = () => {
               />
               <p className="productName">{product.name}</p>
               <p className="productPrice">₹{product.price.toFixed(2)}</p>
-              {/* <p className="category">{product.category}</p> */}
             </div>
           ))
         )}

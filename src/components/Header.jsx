@@ -10,14 +10,15 @@ const Header =({searchText, setSearchText, onCategoryChange}) =>{
             <div className="searchBar">
                 <input type="text" placeholder="Search Products..." value={searchText}
                 onChange={(e) => setSearchText(e.target.value)} />
-                {searchText && (<button className="clearBtn" onclick ={()=>searchText('')}>❌</button>)}
+                {searchText && (<button className="clearBtn" onClick ={()=>searchText('')}>❌</button>)}
 
             </div>
-            <select className="dropdown" onChange={(e) => onCatogeryChange(e.target.ariaValueNow)}>
+            <select className="dropdown" onChange={(e) => onCategoryChange(e.target.value)}>
                 <option value="All"> All</option>
                  <option value="Main Course">Main Course</option>
-                  <option value="Snacks">Snacks</option>
+                  <option value="Snack">Snack</option>
                    <option value="Dessert">Dessert</option>
+                    <option value="Street Food">Street Food</option>
 
             </select>
         </header>
