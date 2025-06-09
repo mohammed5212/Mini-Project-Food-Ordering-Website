@@ -8,6 +8,8 @@ import products from './data/Products.json';
 const App = ()=> {
    const [searchText, setSearchText] = useState('');
   const [category, setCategory] = useState('All');
+
+  
  const filteredProducts = products.filter(product =>
     (category === 'All' || product.category === category) &&
     product.name.toLowerCase().includes(searchText.toLowerCase())
