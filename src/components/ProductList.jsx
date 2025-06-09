@@ -1,7 +1,7 @@
 import "../style/App.css";
 import products from "../data/Products.json";
 
-const ProductList = ({products}) => {
+const ProductList = ({products , onAddToCart}) => {
   return (
     <>
 
@@ -20,6 +20,7 @@ const ProductList = ({products}) => {
               <p className="productName">{product.name}</p>
               <p className="productPrice">₹{product.price.toFixed(2)}</p>
               
+              <button onClick={() => onAddToCart(product)}>Add to Cart</button>
              
             </div>
           ))
