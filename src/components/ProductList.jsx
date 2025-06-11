@@ -1,7 +1,18 @@
+
+import { useNavigate } from "react-router-dom";
 import "../style/App.css";
-import products from "../data/Products.json";
+// import products from "../data/Products.json";
 
 const ProductList = ({products , onAddToCart}) => {
+ 
+  const navigate = useNavigate();
+
+  const handleBuyNow = (product) => {
+    onAddToCart(product);
+    navigate('/checkout');
+  };
+ 
+ 
   return (
     <>
 
@@ -19,9 +30,9 @@ const ProductList = ({products , onAddToCart}) => {
               />
               <p className="productName">{product.name}</p>
               <p className="productPrice">₹{product.price.toFixed(2)}</p>
-              
+
               <button onClick={() => onAddToCart(product)}>Add to Cart</button>
-             
+              <button onClick={()=>handleBuyNow(product)}>Buy Now</button>
             </div>
           ))
         )}
