@@ -21,14 +21,14 @@
   justify-content: space-between; 
 
 }
-.productImage {height: 70%;
-    width: 100%; 
+.productImage {height: 60%;
+    width: auto; 
     
 
 }
-.productName {
+.productName {color: #800000;
 
 }
-.productPrice {
+.productPrice {color: #ff00ff;
 
 } 
