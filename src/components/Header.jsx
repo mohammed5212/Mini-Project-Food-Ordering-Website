@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from 'react-router-dom';
 import"./Header.css";
 
 
@@ -10,7 +10,7 @@ const Header =({searchText, setSearchText, onCategoryChange}) =>{
             <div className="searchBar">
                 <input type="text" placeholder="Search Products..." value={searchText}
                 onChange={(e) => setSearchText(e.target.value)} />
-                {searchText && (<button className="clearBtn" onClick ={()=>searchText('')}>❌</button>)}
+                {searchText && (<button className="clearBtn" onClick ={()=>setSearchText('')}>❌</button>)}
 
             </div>
             <select className="dropdown" onChange={(e) => onCategoryChange(e.target.value)}>
@@ -21,6 +21,7 @@ const Header =({searchText, setSearchText, onCategoryChange}) =>{
                     <option value="Street Food">Street Food</option>
 
             </select>
+             <Link to="/cart">🛒 Cart</Link>
         </header>
     )
 }
