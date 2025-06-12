@@ -1,0 +1,43 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+.logo {
+     font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.searchBar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0 12px;
+}
+
+.searchBar input {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.dropdown {
+  padding: 6px 8px;
+  font-size: 14px;
+}
