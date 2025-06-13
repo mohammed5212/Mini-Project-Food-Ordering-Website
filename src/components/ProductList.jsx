@@ -30,9 +30,11 @@ const ProductList = ({products , onAddToCart}) => {
               />
               <p className="productName">{product.name}</p>
               <p className="productPrice">₹{product.price.toFixed(2)}</p>
-
-              <button onClick={() => onAddToCart(product)}>Add to Cart</button>
+                <div className="button">
+   <button onClick={() => onAddToCart(product)}>Add to Cart</button>
               <button onClick={()=>handleBuyNow(product)}>Buy Now</button>
+                </div>
+           
             </div>
           ))
         )}

@@ -40,3 +40,9 @@
 .productPrice {color: #ff00ff;
 
 } 
+.button{
+  display: flex;
+  justify-content:space-evenly;
+  
+
+}
