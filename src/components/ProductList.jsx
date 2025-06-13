@@ -1,24 +1,21 @@
-
 import { useNavigate } from "react-router-dom";
 import "../style/App.css";
 // import products from "../data/Products.json";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const ProductList = ({products , onAddToCart}) => {
- 
+const ProductList = ({ products, onAddToCart }) => {
   const navigate = useNavigate();
 
   const handleBuyNow = (product) => {
     onAddToCart(product);
-    navigate('/checkout');
+    navigate("/checkout");
   };
- 
- 
+
   return (
     <>
-
       <h1>Products</h1>
       <div className="productContainer">
-        {products.length===0 ?(
+        {products.length === 0 ? (
           <p className="noProducts">No Products Available.</p>
         ) : (
           products?.map((product) => (
@@ -30,11 +27,12 @@ const ProductList = ({products , onAddToCart}) => {
               />
               <p className="productName">{product.name}</p>
               <p className="productPrice">₹{product.price.toFixed(2)}</p>
-                <div className="button">
-   <button onClick={() => onAddToCart(product)}>Add to Cart</button>
-              <button onClick={()=>handleBuyNow(product)}>Buy Now</button>
-                </div>
-           
+              <div>
+                <button type="button" className="btn btn-outline-primary" onClick={() => onAddToCart(product)}>
+                  Add to Cart
+                </button>
+                <button type="button" className="btn btn-outline-success" onClick={() => handleBuyNow(product)}>Buy Now</button>
+              </div>
             </div>
           ))
         )}

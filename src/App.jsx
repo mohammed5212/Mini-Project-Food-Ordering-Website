@@ -30,9 +30,9 @@ const App = ()=> {
         onCategoryChange={setCategory}
       />
       <Routes>
-        <Route path='/' element={<ProductList products={filteredProducts} onAddToCart={handleAddToCart} />}/>
+        <Route path='/' element={<ProductList products={filteredProducts} onAddToCart={handleAddToCart} cartItems={cartItems}/>}/>
       <Route path="/cart" element={<Cart cartItems={cartItems} />} />
-       <Route path="/checkout" element={<Checkout />} />
+       <Route path="/checkout" element={<Checkout  cartItems={cartItems} />} />
       </Routes>
                                    
      
