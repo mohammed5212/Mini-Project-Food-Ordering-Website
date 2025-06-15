@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login'
 import UserDashboard from './components/UserDashboard';
-import AdminDashboard  from './components/UserDashboard'; 
+import AdminDashboard  from './components/AdminDashboard'; 
 import ProductList from './components/ProductList'
 import Header from './components/Header';
 import Cart from './components/Cart'
 import products from './data/Products.json';
 import Checkout from './components/Checkout';
 import ProtectedRoute from './components/ProtectedRoute';
-import 
+
 const App = ()=> {
    const [searchText, setSearchText] = useState('');
   const [category, setCategory] = useState('All');
@@ -40,7 +40,7 @@ const App = ()=> {
      
       <Route path='/admin' element ={<ProtectedRoute allowedRoles={['admin']}>
      <AdminDashboard/>
-     </ProtectedRoute>}
+     </ProtectedRoute>}/>
 
      <Route path='/user' element ={
       <ProtectedRoute allowedRoles={['user']}>
