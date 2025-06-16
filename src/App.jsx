@@ -33,10 +33,11 @@ const App = ()=> {
         onCategoryChange={setCategory}
       />
       <Routes>
-        <Route path='/' element={<ProductList products={filteredProducts} onAddToCart={handleAddToCart} cartItems={cartItems}/>}/>
+        <Route path='/' element = {<Login/>}/>
+        <Route path='/products' element={<ProductList products={filteredProducts} onAddToCart={handleAddToCart} cartItems={cartItems}/>}/>
       <Route path="/cart" element={<Cart cartItems={cartItems} />} />
        <Route path="/checkout" element={<Checkout  cartItems={cartItems} />} />
-      <Route path='/Login' element = {<Login/>}/>
+      
      
       <Route path='/admin' element ={<ProtectedRoute allowedRoles={['admin']}>
      <AdminDashboard/>
