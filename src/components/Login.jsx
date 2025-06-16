@@ -27,10 +27,10 @@ const Login = () => {
   };
 
   return (
-    <div className="container mt-5" style={{ maxWidth: '400px' }}>
+    <div className="container  mt-5 py-10px bg-color:red" style={{ maxWidth: '400px', maxHeight :'auto' }}>
       <h2 className="mb-4">🔐 Login</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3">
+        <div className="mb-3 d-flex  align-items-center justify-content-center">
           <input
             type="text"
             className="form-control"
@@ -50,8 +50,8 @@ const Login = () => {
         </div>
         <button type="submit" className="btn btn-primary w-100">Login</button>
         
-<p style={{ marginTop: '1rem', color: '#555' }}>
-  You can login as <strong>User</strong> or <strong>Admin</strong> !!
+<p className='d-flex justify-content-center align-items-center' style={{height:"30vh"}}>
+  You can login as  User   or   Admin
 </p>
       </form>
     </div>
