@@ -49,6 +49,10 @@ const Login = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary w-100">Login</button>
+        
+<p style={{ marginTop: '1rem', color: '#555' }}>
+  You can login as <strong>User</strong> or <strong>Admin</strong> !!
+</p>
       </form>
     </div>
   );
