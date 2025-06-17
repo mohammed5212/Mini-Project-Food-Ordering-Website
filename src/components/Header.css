@@ -57,3 +57,12 @@ white-space: nowrap;
   padding: 6px 8px;
   font-size: 14px;
 }
+@media (max-width: 768px) {
+  header .row > div {
+    margin-bottom: 10px;
+  }
+
+  .form-control, .form-select {
+    width: 100%;
+  }
+}
