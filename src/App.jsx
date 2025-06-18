@@ -45,7 +45,8 @@ const isLoginPage = location.pathname === '/';
        <Route path="/checkout" element={<Checkout  cartItems={cartItems} />} />
       
      
-      <Route path='/admin' element ={<ProtectedRoute allowedRoles={['admin']}>
+      <Route path='/admin' element ={
+        <ProtectedRoute allowedRoles={['admin']}>
      <AdminDashboard/>
      </ProtectedRoute>}/>
 
@@ -58,7 +59,7 @@ const isLoginPage = location.pathname === '/';
       </Routes>
                                    
      
-/
+
      </>
   )
 }
