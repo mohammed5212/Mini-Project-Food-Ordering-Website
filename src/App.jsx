@@ -37,7 +37,7 @@ const isLoginPage = location.pathname === '/';
         onCategoryChange={setCategory}
       />)}
 
-       {/* <Router> */}
+    
       <Routes>
         <Route path='/' element = {<Login/>}/>
         <Route path='/products' element={<ProductList products={filteredProducts} onAddToCart={handleAddToCart} cartItems={cartItems}/>}/>

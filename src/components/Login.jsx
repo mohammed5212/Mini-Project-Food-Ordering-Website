@@ -20,14 +20,14 @@ const Login = () => {
     } else if (username === 'user' && password === 'user123') {
       dispatch(login('user'));
       localStorage.setItem('auth', JSON.stringify({ isAuthenticated: true, userType: 'user' }));
-      navigate('/user');
+      navigate('/products');
     } else {
       alert('Invalid credentials');
     }
   };
 
   return (
-    <div className="container  mt-5 py-10px bg-color:red" style={{ maxWidth: '400px', maxHeight :'auto' }}>
+    <div className="container mt-5 py-10px bg-light min-vh-100 align-items-center" style={{ maxWidth: '400px', maxHeight :'auto' }}>
       <h2 className="mb-4">🔐 Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3 d-flex  align-items-center justify-content-center">
