@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route , useLocation} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route , useLocation, Navigate} from 'react-router-dom';
+
 import Login from './components/Login'
 import UserDashboard from './components/UserDashboard';
 import AdminDashboard  from './components/AdminDashboard'; 
@@ -12,7 +13,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 
 const App = ()=> {
   const location = useLocation();
-const isLoginPage = location.pathname === '/';
+const isLoginPage = location.pathname === '/login';
    const [searchText, setSearchText] = useState('');
   const [category, setCategory] = useState('All');
   const [cartItems, setCartItems]=useState([])
@@ -35,6 +36,7 @@ const isLoginPage = location.pathname === '/';
         searchText={searchText}
         setSearchText={setSearchText}
         onCategoryChange={setCategory}
+         cartCount={cartItems.length}
       />)}
 
     
