@@ -17,14 +17,15 @@ const Header = ({ searchText, setSearchText, onCategoryChange }) => {
   const handleLogout = () => {
     dispatch(logout());
     localStorage.removeItem('auth');
-    navigate('/login');
+    navigate('/');
   };
 
   // Hide header on login page
   if (location.pathname === '/login') return null;
 
   return (
-    <header className="container-fluid bg-light py-2 shadow-sm">
+    <header 
+    className="container-fluid bg-light py-2 shadow-sm">
       <div className="row align-items-center">
         <div className="col-md-2 text-center text-md-start mb-2 mb-md-0">
           <h4 className="m-0">🍽️ Food Order</h4>
