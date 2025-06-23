@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route , useLocation, Navigate} from 'react-router-dom';
+
 import Login from './components/Login'
 import UserDashboard from './components/UserDashboard';
 import AdminDashboard  from './components/AdminDashboard'; 
@@ -35,6 +36,7 @@ const isLoginPage = location.pathname === '/login';
         searchText={searchText}
         setSearchText={setSearchText}
         onCategoryChange={setCategory}
+         cartCount={cartItems.length}
       />)}
 
     

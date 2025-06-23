@@ -21,7 +21,7 @@ const Header = ({ searchText, setSearchText, onCategoryChange }) => {
   };
 
   // Hide header on login page
-  if (location.pathname === '/login') return null;
+  if (location.pathname === '/') return null;
 
   return (
     <header 
