@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { login } from '../reducer/authSlice';
+import { login } from '../redux/authSlice';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
