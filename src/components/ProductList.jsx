@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../style/App.css";
-// import products from "../data/Products.json";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ProductList = ({ products, onAddToCart }) => {

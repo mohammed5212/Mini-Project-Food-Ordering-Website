@@ -11,7 +11,7 @@ import products from './data/Products.json';
 import Checkout from './components/Checkout';
 import ProtectedRoute from './components/ProtectedRoute';
 
-const App = ()=> {
+const AppContent = ()=> {
   const location = useLocation();
 const isLoginPage = location.pathname === '/login';
    const [searchText, setSearchText] = useState('');
@@ -41,7 +41,7 @@ const isLoginPage = location.pathname === '/login';
 
     
       <Routes>
-        <Route path='/' element = {<Login/>}/>
+        <Route path='/login' element = {<Login/>}/>
         <Route path='/products' element={<ProductList products={filteredProducts} onAddToCart={handleAddToCart} cartItems={cartItems}/>}/>
       <Route path="/cart" element={<Cart cartItems={cartItems} />} />
        <Route path="/checkout" element={<Checkout  cartItems={cartItems} />} />
@@ -49,6 +49,7 @@ const isLoginPage = location.pathname === '/login';
      
       <Route path='/admin' element ={
         <ProtectedRoute allowedRoles={['admin']}>
+          
      <AdminDashboard/>
      </ProtectedRoute>}/>
 
@@ -65,6 +66,14 @@ const isLoginPage = location.pathname === '/login';
      </>
   )
 }
+const App = () => {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+};
+
 
 export default App
  

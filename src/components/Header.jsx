@@ -17,7 +17,7 @@ const Header = ({ searchText, setSearchText, onCategoryChange }) => {
   const handleLogout = () => {
     dispatch(logout());
     localStorage.removeItem('auth');
-    navigate('/');
+    navigate('/login');
   };
 
   // Hide header on login page
