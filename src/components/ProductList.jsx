@@ -1,26 +1,31 @@
-import { useSelector } from 'react-redux';
+import { useDispatch,useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { addToCart } from "../redux/cartSlice";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/App.css";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-const ProductList = ({ products, onAddToCart }) => {
+const ProductList = () => {
+  const products = useSelector((state) => state.products);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-
-  const handleBuyNow = (product) => {
-    onAddToCart(product);
-    navigate("/checkout");
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
   };
+
+const handleBuyNow = (product) => {
+  localStorage.setItem("buyNowItem", JSON.stringify([product]));
+  navigate("/checkout-now");
+};
 
   return (
     <>
-      <h1>Products</h1>
-      <div className="productContainer">
-        {products.length === 0 ? (
+<h1 className="text-warning">Dishes</h1>    
+   <div className="productContainer">
+        {!products || products.length === 0 ? (
           <p className="noProducts">No Products Available.</p>
         ) : (
-          products?.map((product) => (
+          products.map((product) => (
             <div className="productItem" key={product.id}>
               <img
                 src={product.image}
@@ -28,12 +33,21 @@ const ProductList = ({ products, onAddToCart }) => {
                 className="productImage"
               />
               <p className="productName">{product.name}</p>
-              <p className="productPrice">₹{product.price.toFixed(2)}</p>
-              <div>
-                <button type="button" className="btn btn-outline-primary" onClick={() => onAddToCart(product)}>
+<p className="productPrice">₹{Number(product.price).toFixed(2)}</p>              <div>
+                <button
+                  type="button"
+                  className="btn btn-outline-primary me-2"
+                  onClick={() => handleAddToCart(product)}
+                >
                   Add to Cart
                 </button>
-                <button type="button" className="btn btn-outline-success" onClick={() => handleBuyNow(product)}>Buy Now</button>
+                <button
+                  type="button"
+                  className="btn btn-outline-success"
+                  onClick={() => handleBuyNow(product)}
+                >
+                  Buy Now
+                </button>
               </div>
             </div>
           ))
@@ -42,4 +56,5 @@ const ProductList = ({ products, onAddToCart }) => {
     </>
   );
 };
+
 export default ProductList;

@@ -4,7 +4,7 @@
 
 import { useState } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-
+import { useSelector } from 'react-redux';
 import Login from './components/Login';
 import UserDashboard from './components/UserDashboard';
 import AdminDashboard from './components/AdminDashboard';
@@ -22,9 +22,10 @@ const App = () => {
   const hideHeader =
     location.pathname === '/login' || location.pathname.startsWith('/admin');
 
+
   const [searchText, setSearchText] = useState('');
   const [category, setCategory] = useState('All');
-  const [cartItems, setCartItems] = useState([]);
+ const cartItems = useSelector((state) => state.cart.cartItems);
 
   const handleAddToCart = (product) => {
     setCartItems((prevItems) => [...prevItems, product]);
@@ -47,23 +48,16 @@ const App = () => {
       )}
 
       <Routes>
-        {/* ✅ Default route redirect */}
+       
         <Route path="/" element={<Navigate to="/products" replace />} />
 
-        <Route
-          path="/products"
-          element={
-            <ProductList
-              products={filteredProducts}
-              onAddToCart={handleAddToCart}
-              cartItems={cartItems}
-            />
-          }
-        />
+      
+        <Route path="/products" element={<ProductList />} />
+
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart cartItems={cartItems} />} />
         <Route path="/checkout" element={<Checkout cartItems={cartItems} />} />
-
+        <Route path="/checkout-now" element={<Checkout isBuyNow={true} />} />
         <Route
           path="/admin"
           element={
@@ -81,6 +75,8 @@ const App = () => {
           }
         />
       </Routes>
+      
+    {/* {showHome && <HomeButton />}  */}
     </>
   );
 };

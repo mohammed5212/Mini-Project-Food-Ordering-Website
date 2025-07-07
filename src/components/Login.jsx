@@ -9,7 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+ ;
   // Redirect if already authenticated
   useEffect(() => {
     const authData = JSON.parse(localStorage.getItem('auth'));
