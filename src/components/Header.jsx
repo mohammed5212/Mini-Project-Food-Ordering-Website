@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../redux/authSlice';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 import './Header.css';
 
 const Header = ({ searchText, setSearchText, onCategoryChange }) => {
@@ -12,7 +13,14 @@ const Header = ({ searchText, setSearchText, onCategoryChange }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  
+
   const isLoggedIn = useSelector((state) => state.auth.isAuthenticated);
+  const userType = useSelector((state) => state.auth.userType); // 👈 Get user role
+
+const handleLoginClick = () => {
+    navigate('/login'); // 🔁 Redirect to login page
+  };
 
   const handleLogout = () => {
     dispatch(logout());
@@ -64,10 +72,27 @@ const Header = ({ searchText, setSearchText, onCategoryChange }) => {
           </select>
         </div>
 
-        <div className="col-md-3 text-center text-md-end">
-          <Link to="/cart" className="btn btn-outline-primary me-2">
+        <div className="col-md-3 d-flex justify-content-evenly align-items-center  gap-2">
+          <Link to="/cart" className="btn btn-outline-primary">
             🛒 Cart
           </Link>
+
+         {/* Show Welcome Message only if logged in */}
+          {isLoggedIn && (
+            <span className="me-2">
+             Welcome, <strong>{userType === 'admin' ? 'Admin ' : 'User'}</strong>
+            </span>
+          )}
+
+
+
+         {/*  Show Login button only if NOT logged in */}
+          {!isLoggedIn && (
+            <button className="btn btn-outline-primary me-2" onClick={handleLoginClick}>
+              🔐 Login
+            </button>
+          )}
+
           {isLoggedIn && (
             <button className="btn btn-danger" onClick={handleLogout}>
               Logout

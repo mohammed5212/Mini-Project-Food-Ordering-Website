@@ -1,10 +1,13 @@
 
- import { useState } from 'react';
+
+
+
+import { useState } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 
 import Login from './components/Login';
 import UserDashboard from './components/UserDashboard';
-import AdminDashboard from './components/AdminDashboard'; 
+import AdminDashboard from './components/AdminDashboard';
 import ProductList from './components/ProductList';
 import Header from './components/Header';
 import Cart from './components/Cart';
@@ -44,8 +47,9 @@ const App = () => {
       )}
 
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
-        <Route path="/login" element={<Login />} />
+        {/* ✅ Default route redirect */}
+        <Route path="/" element={<Navigate to="/products" replace />} />
+
         <Route
           path="/products"
           element={
@@ -56,8 +60,10 @@ const App = () => {
             />
           }
         />
+        <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart cartItems={cartItems} />} />
         <Route path="/checkout" element={<Checkout cartItems={cartItems} />} />
+
         <Route
           path="/admin"
           element={

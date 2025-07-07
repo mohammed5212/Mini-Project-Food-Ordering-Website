@@ -6,9 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ProductList = ({ products, onAddToCart }) => {
   const navigate = useNavigate();
-// const ProductList = ({ onAddToCart }) => {
-//   const products = useSelector(state => state.products);
-//   const navigate = useNavigate();
 
 
   const handleBuyNow = (product) => {
