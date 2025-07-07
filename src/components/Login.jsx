@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../redux/authSlice';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () => {
@@ -9,6 +9,19 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
+ ;
+  // Redirect if already authenticated
+  useEffect(() => {
+    const authData = JSON.parse(localStorage.getItem('auth'));
+
+    if (authData?.isAuthenticated) {
+      if (authData.userType === 'admin') {
+        navigate('/admin');
+      } else if (authData.userType === 'user') {
+        navigate('/products');
+      }
+    }
+  }, [navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,10 +40,10 @@ const Login = () => {
   };
 
   return (
-    <div className="container mt-5 py-10px bg-light min-vh-100 align-items-center" style={{ maxWidth: '400px', maxHeight :'auto' }}>
+    <div className="container mt-5 py-10px bg-light min-vh-100 align-items-center" style={{ maxWidth: '400px', maxHeight: 'auto' }}>
       <h2 className="mb-4">🔐 Login</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3 d-flex  align-items-center justify-content-center">
+        <div className="mb-3 d-flex align-items-center justify-content-center">
           <input
             type="text"
             className="form-control"
@@ -49,10 +62,10 @@ const Login = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary w-100">Login</button>
-        
-<p className='d-flex justify-content-center align-items-center' style={{height:"30vh"}}>
-  You can login as  User   or   Admin
-</p>
+
+        <p className='d-flex justify-content-center align-items-center' style={{ height: "30vh" }}>
+          You can login as <strong>&nbsp;User&nbsp;</strong> or <strong>&nbsp;Admin</strong>
+        </p>
       </form>
     </div>
   );

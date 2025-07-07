@@ -1,70 +1,84 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route , useLocation, Navigate} from 'react-router-dom';
 
-import Login from './components/Login'
+
+
+
+import { useState } from 'react';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import Login from './components/Login';
 import UserDashboard from './components/UserDashboard';
-import AdminDashboard  from './components/AdminDashboard'; 
-import ProductList from './components/ProductList'
+import AdminDashboard from './components/AdminDashboard';
+import ProductList from './components/ProductList';
 import Header from './components/Header';
-import Cart from './components/Cart'
+import Cart from './components/Cart';
 import products from './data/Products.json';
 import Checkout from './components/Checkout';
 import ProtectedRoute from './components/ProtectedRoute';
 
-const App = ()=> {
+const App = () => {
   const location = useLocation();
-const isLoginPage = location.pathname === '/login';
-   const [searchText, setSearchText] = useState('');
+
+  // Hide header on login and all admin routes
+  const hideHeader =
+    location.pathname === '/login' || location.pathname.startsWith('/admin');
+
+
+  const [searchText, setSearchText] = useState('');
   const [category, setCategory] = useState('All');
-  const [cartItems, setCartItems]=useState([])
+ const cartItems = useSelector((state) => state.cart.cartItems);
 
   const handleAddToCart = (product) => {
-  setCartItems(prevItems => [...prevItems, product]);
-};
- const filteredProducts = products.filter(product =>
+    setCartItems((prevItems) => [...prevItems, product]);
+  };
+
+  const filteredProducts = products.filter((product) =>
     (category === 'All' || product.category === category) &&
     product.name.toLowerCase().includes(searchText.toLowerCase())
   );
-  
-
 
   return (
-   <>
-  
-      {!isLoginPage && (
-     <Header
-        searchText={searchText}
-        setSearchText={setSearchText}
-        onCategoryChange={setCategory}
-         cartCount={cartItems.length}
-      />)}
+    <>
+      {!hideHeader && (
+        <Header
+          searchText={searchText}
+          setSearchText={setSearchText}
+          onCategoryChange={setCategory}
+          cartCount={cartItems.length}
+        />
+      )}
 
-    
       <Routes>
-        <Route path='/' element = {<Login/>}/>
-        <Route path='/products' element={<ProductList products={filteredProducts} onAddToCart={handleAddToCart} cartItems={cartItems}/>}/>
-      <Route path="/cart" element={<Cart cartItems={cartItems} />} />
-       <Route path="/checkout" element={<Checkout  cartItems={cartItems} />} />
+       
+        <Route path="/" element={<Navigate to="/products" replace />} />
+
       
-     
-      <Route path='/admin' element ={
-        <ProtectedRoute allowedRoles={['admin']}>
-     <AdminDashboard/>
-     </ProtectedRoute>}/>
+        <Route path="/products" element={<ProductList />} />
 
-     <Route path='/user' element ={
-      <ProtectedRoute allowedRoles={['user']}>
-      <UserDashboard/>
-      </ProtectedRoute>
-     }/>
-
+        <Route path="/login" element={<Login />} />
+        <Route path="/cart" element={<Cart cartItems={cartItems} />} />
+        <Route path="/checkout" element={<Checkout cartItems={cartItems} />} />
+        <Route path="/checkout-now" element={<Checkout isBuyNow={true} />} />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute allowedRoles={['admin']}>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/user"
+          element={
+            <ProtectedRoute allowedRoles={['user']}>
+              <UserDashboard />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
-                                   
-     
+      
+    {/* {showHome && <HomeButton />}  */}
+    </>
+  );
+};
 
-     </>
-  )
-}
-
-export default App
- 
+export default App;
