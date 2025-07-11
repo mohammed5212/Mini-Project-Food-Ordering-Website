@@ -7,26 +7,23 @@
 
 .productContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 16px;
   padding: 10px;
 }
 
-/* On large screens (≥ 1024px), show 6 columns */
 @media (min-width: 1024px) {
   .productContainer {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 
-/* On small screens (≤ 768px), show 3 columns */
 @media (max-width: 768px) {
   .productContainer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* On extra small screens (≤ 480px), show 2 columns */
 @media (max-width: 480px) {
   .productContainer {
     grid-template-columns: repeat(2, 1fr);
